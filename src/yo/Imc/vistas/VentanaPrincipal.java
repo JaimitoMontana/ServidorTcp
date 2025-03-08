@@ -63,6 +63,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel2.setText("Direccion IP:");
         jLabel2.setToolTipText("");
 
+        campoIP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoIPActionPerformed(evt);
+            }
+        });
+
         jLabel3.setText("Puerto De Red:");
         jLabel3.setToolTipText("");
 
@@ -220,6 +226,10 @@ ServidorTcp s;
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
             cajaLog.setText("");
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void campoIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoIPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoIPActionPerformed
 
     public JButton getBtnIniciar() {
         return btnIniciar;

@@ -13,17 +13,16 @@ import javax.xml.transform.Templates;
 import yo.Imc.servidor.SubProcesoCliente;
 import yo.Imc.vistas.VentanaPrincipal;
 
-
 public class ServidorTcp extends Thread {
 
     private Boolean estado;
     public static Map<String, SubProcesoCliente> listaDeClientes;
-    private Integer puerto = 9007;
+    private Integer puerto = 9008;
     private ServerSocket servicio;
     private VentanaPrincipal ventana;
 
     public ServidorTcp(Integer puerto, VentanaPrincipal v) {
-        if (puerto != null || puerto != 0) {
+        if (puerto != null && puerto != 0) {
             this.puerto = puerto;
         }
         ventana = v;
@@ -62,7 +61,7 @@ public class ServidorTcp extends Thread {
             System.out.println(msg);
             ventana.getCajaLog().append(msg + "\n");
             ventana.getBtnIniciar().setText("INICIAR");
-            ventana.getTxtEstado().setText("OFF LINE");
+            ventana.getTxtEstado().setText("OFFLINE");
         }
     }
 
